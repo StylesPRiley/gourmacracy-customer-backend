@@ -15,11 +15,10 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "mongoose": "^5.12.11",
+    "mongoose": "^5.13.14",
     "morgan": "~1.9.1",
     "pug": "^3.0.2"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/StylesPRiley/gourmacracy-customer-backend.git"
