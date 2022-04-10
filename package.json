@@ -18,5 +18,17 @@
     "mongoose": "^5.12.11",
     "morgan": "~1.9.1",
     "pug": "^3.0.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StylesPRiley/gourmacracy-customer-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StylesPRiley/gourmacracy-customer-backend/issues"
+  },
+  "homepage": "https://github.com/StylesPRiley/gourmacracy-customer-backend#readme",
+  "description": ""
 }
