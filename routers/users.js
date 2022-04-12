@@ -7,12 +7,12 @@ function HandleError(response, reason, message, code){
     response.status(code || 500).json({"error": message});
 }
 
-//Gets all the books
+//Gets all the users
 router.get('/', (request, response, next)=>{
     let word = request.query['name'];
     if (result){
         UserSchema
-            .find({"name": word})
+            .find({"email": word})
             .exec( (error, users) =>{
                 if (error){
                     response.send({"error": error});
@@ -33,16 +33,16 @@ router.get('/', (request, response, next)=>{
     }
 });
 
-//Gets the book with the given id (catch error of id not found)
-router.get('/:id', (request, response, next) =>{
+//Gets the user with the given email (catch error of id not found)
+router.get('/:email', (request, response, next) =>{
     UserSchema
-        .findById({"_id": request.params.id}, (error, result) => {
+        .findById({"email": request.params.email}, (error, result) => {
             if (error){
                 response.status(500).send(error);
             }else if (result){
                 response.send(result);
             }else{
-                response.status(404).send({"id": request.params.id, "error": "Not Found"});
+                response.status(404).send({"email": request.params.email, "error": "Not Found"});
             }
         });
 });
@@ -68,7 +68,7 @@ router.post('/', (request, response, next) =>{
   }
 });
 
-//Modifies a book with the given id
+//Modifies a user with the given id
 router.patch('/:id', (request, response, next) => {
     UserSchema
         .findById(request.params.id, (error, result) => {
