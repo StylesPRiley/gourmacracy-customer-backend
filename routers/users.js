@@ -9,6 +9,8 @@ function HandleError(response, reason, message, code){
     response.status(code || 500).json({"error": message});
 }
 
+
+
 //Gets all the users
 router.get('/', (request, response, next)=>{
     let word = request.query['name'];
